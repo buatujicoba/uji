@@ -1,0 +1,859 @@
+/* Reset dan style dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+/* Header dan navigasi */
+header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 2rem;
+    background: linear-gradient(90deg, #3498db, #2ecc71);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 0.8rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #3498db;
+}
+
+/* Hero section */
+#beranda {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://www.thefhguide.com/img/artificial-intelligence.jpg') no-repeat center center/cover;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 2rem;
+}
+
+#beranda h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: white; 
+}
+
+#beranda p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin-bottom: 2rem;
+}
+
+#beranda a {
+    background-color: #3498db;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(52, 152, 219, 0.4);
+}
+
+#beranda a:hover {
+    background-color: #2980b9;
+    transform: translateY(-3px);
+}
+
+/* Section umum */
+section {
+    padding: 5rem 2rem;
+}
+
+section:nth-child(odd) {
+    background-color: white;
+}
+
+section h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #2c3e50;
+    font-size: 2rem;
+}
+
+section > p {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 3rem auto;
+    color: #7f8c8d;
+}
+
+/* Layanan */
+#layanan article {
+    background-color: white;
+    border-radius: 8px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#layanan article:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+#layanan h3 {
+    color: #3498db;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+#layanan ul {
+    margin-top: 1rem;
+    margin-left: 1.5rem;
+}
+
+.pricing-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.pricing-card {
+    flex: 1;
+    min-width: 250px;
+    max-width: 300px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    position: relative;
+    border: 1px solid #e0e0e0;
+    height: 600px;
+    padding-bottom: 100px;
+}
+
+.pricing-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.pricing-card.highlight {
+    border: 2px solid #3498db;
+    transform: scale(1.05);
+    height: 600px;
+}
+
+.pricing-card.highlight:hover {
+    transform: scale(1.05) translateY(-10px);
+}
+
+.pricing-tag {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: #e74c3c;
+    color: white;
+    font-size: 0.8rem;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.pricing-card h4 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    color: #2c3e50;
+}
+
+.price {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #3498db;
+    margin-bottom: 1.5rem;
+}
+
+.pricing-card ul {
+    list-style: none;
+    margin: 0 0 60px 0;
+    padding: 0;
+    text-align: left;
+}
+
+.pricing-card ul li {
+    margin-bottom: 0.8rem;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.pricing-card ul li::before {
+    content: "✓";
+    color: #2ecc71;
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+.pricing-button {
+    display: inline-block;
+    background-color: #3498db;
+    color: white;
+    text-decoration: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 30px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.pricing-button:hover {
+    background-color: #2980b9;
+    transform: translateX(-50%) translateY(-3px);
+}
+
+/* Testimoni */
+#testimoni {
+    background-color: #ecf0f1;
+}
+
+blockquote {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    margin-bottom: 2rem;
+    position: relative;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+blockquote::before {
+    content: '"';
+    font-size: 5rem;
+    color: #3498db;
+    opacity: 0.2;
+    position: absolute;
+    top: -15px;
+    left: 10px;
+}
+
+blockquote p {
+    font-style: italic;
+    margin-bottom: 1rem;
+}
+
+cite {
+    display: block;
+    text-align: right;
+    font-weight: bold;
+    color: #3498db;
+}
+
+/* Blog Section */
+.blog-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.blog-card {
+    flex: 1;
+    min-width: 300px;
+    max-width: 380px;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.blog-card:hover {
+    transform: translateY(-10px);
+}
+
+.blog-image {
+    height: 200px;
+    overflow: hidden;
+}
+
+.blog-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.blog-card:hover .blog-image img {
+    transform: scale(1.05);
+}
+
+.blog-content {
+    padding: 1.5rem;
+}
+
+.blog-date {
+    font-size: 0.85rem;
+    color: #7f8c8d;
+    margin-bottom: 0.5rem;
+}
+
+.blog-content h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: #2c3e50;
+}
+
+.blog-content p {
+    color: #7f8c8d;
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+}
+
+.blog-link {
+    display: inline-block;
+    color: #3498db;
+    font-weight: 500;
+    text-decoration: none;
+    position: relative;
+}
+
+.blog-link::after {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 0;
+    background-color: #3498db;
+    transition: width 0.3s ease;
+}
+
+.blog-link:hover::after {
+    width: 100%;
+}
+
+.blog-more {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.blog-more-button {
+    display: inline-block;
+    background-color: transparent;
+    color: #3498db;
+    border: 2px solid #3498db;
+    padding: 0.8rem 2rem;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.blog-more-button:hover {
+    background-color: #3498db;
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
+}
+
+/* Formulir kontak */
+#kontak form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+#kontak div {
+    margin-bottom: 1.5rem;
+}
+
+#kontak label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+#kontak input,
+#kontak textarea,
+#kontak select {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+#kontak input:focus,
+#kontak textarea:focus,
+#kontak select:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+}
+
+#kontak button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(52, 152, 219, 0.4);
+}
+
+#kontak button:hover {
+    background-color: #2980b9;
+    transform: translateY(-3px);
+}
+
+/* Footer */
+footer {
+    background-color: #2c3e50;
+    color: white;
+    padding: 3rem 2rem 1.5rem;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 2rem;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 250px;
+}
+
+.footer-column h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+    color: #3498db;
+}
+
+.footer-column p {
+    margin-bottom: 1.5rem;
+    color: #ecf0f1;
+}
+
+.footer-column ul {
+    list-style: none;
+}
+
+.footer-column ul li {
+    margin-bottom: 0.8rem;
+}
+
+.footer-column a {
+    color: #ecf0f1;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-column a:hover {
+    color: #3498db;
+}
+
+.social-icons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.social-icon {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.social-icon::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.facebook::before {
+    content: "f";
+    font-weight: bold;
+}
+
+.twitter::before {
+    content: "t";
+    font-weight: bold;
+}
+
+.instagram::before {
+    content: "i";
+    font-weight: bold;
+}
+
+.linkedin::before {
+    content: "in";
+    font-weight: bold;
+    font-size: 0.8rem;
+}
+
+.social-icon:hover {
+    background-color: #3498db;
+    transform: translateY(-3px);
+}
+
+address {
+    font-style: normal;
+    line-height: 1.8;
+    color: #ecf0f1;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+    padding-top: 1.5rem;
+    margin-top: 3rem;
+}
+
+.footer-bottom p {
+    font-size: 0.9rem;
+    color: #bdc3c7;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    header {
+        flex-direction: row !important;
+        flex-wrap: wrap;
+        justify-content: space-between !important;
+        padding: 1rem !important;
+    }
+    
+    header h1 {
+        margin-bottom: 0 !important;
+    }
+    
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.8rem;
+    }
+    
+    #beranda {
+        height: auto;
+        padding: 5rem 1rem;
+    }
+    
+    #beranda h2 {
+        font-size: 2rem;
+    }
+    
+    section {
+        padding: 3rem 1rem;
+    }
+    
+    .pricing-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .pricing-card {
+        width: 100%;
+        max-width: 350px;
+        margin-bottom: 2rem;
+        /* Mempertahankan tinggi tetap di mobile */
+        height: 600px;
+    }
+    
+    .pricing-card.highlight {
+        transform: none;
+        /* Mempertahankan tinggi tetap di mobile */
+        height: 600px;
+    }
+    
+    .pricing-card.highlight:hover {
+        transform: translateY(-10px);
+    }
+    
+    .blog-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .blog-card {
+        width: 100%;
+        max-width: 400px;
+    }
+    
+    .footer-column {
+        flex: 100%;
+        text-align: center;
+    }
+    
+    .social-icons {
+        justify-content: center;
+    }
+    
+    /* Fix untuk tombol pada hover di mobile */
+    .pricing-button:hover {
+        transform: translateX(-50%) translateY(-3px);
+    }
+}
+
+/* Tentang Kami Section */
+.tentang-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.tentang-image {
+    flex: 1;
+    min-width: 300px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.tentang-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.tentang-image img:hover {
+    transform: scale(1.03);
+}
+
+.tentang-content {
+    flex: 2;
+    min-width: 300px;
+}
+
+.tentang-content h3 {
+    color: #3498db;
+    margin-top: 1.5rem;
+    margin-bottom: 0.8rem;
+    font-size: 1.3rem;
+}
+
+.tentang-content h3:first-child {
+    margin-top: 0;
+}
+
+.tentang-content ul {
+    margin-left: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.tentang-content li {
+    margin-bottom: 0.5rem;
+}
+
+/* Animasi */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+section {
+    animation: fadeIn 0.8s ease-out;
+}
+
+/* Style untuk Toggle Menu Mobile */
+.nav-toggle {
+    display: none;
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 1.8rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    transition: transform 0.3s ease;
+}
+
+.nav-toggle:hover {
+    transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: row !important;
+        flex-wrap: wrap;
+        justify-content: space-between !important;
+        padding: 1rem !important;
+    }
+    
+    header h1 {
+        margin-bottom: 0 !important;
+    }
+    
+    .nav-toggle {
+        display: block;
+    }
+    
+    nav {
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s ease;
+    }
+    
+    nav.active {
+        max-height: 300px;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+        padding: 1rem 0;
+        gap: 0.5rem !important;
+    }
+    
+    nav li {
+        width: 100%;
+        text-align: center;
+    }
+    
+    nav a {
+        display: block;
+        padding: 0.8rem !important;
+    }
+}
+
+/* Style untuk validasi form */
+.error-message {
+    color: #e74c3c;
+    font-size: 0.85rem;
+    margin-top: 0.3rem;
+    display: block;
+}
+
+input.invalid, textarea.invalid, select.invalid {
+    border-color: #e74c3c !important;
+    background-color: rgba(231, 76, 60, 0.1);
+}
+
+input.valid, textarea.valid, select.valid {
+    border-color: #2ecc71 !important;
+    background-color: rgba(46, 204, 113, 0.1);
+}
+
+/* Style untuk pesan sukses */
+.success-message {
+    background-color: rgba(46, 204, 113, 0.2);
+    color: #2ecc71;
+    padding: 1rem;
+    margin-top: 1rem;
+    border-radius: 4px;
+    text-align: center;
+}
+
+/* Style untuk popup alert */
+.custom-alert {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    max-width: 400px;
+    width: 90%;
+    text-align: center;
+    animation: fadeIn 0.3s ease-out;
+}
+
+.alert-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    animation: fadeIn 0.3s ease-out;
+}
+
+.alert-title {
+    color: #3498db;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+.alert-message {
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+
+.alert-button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 0.8rem 2rem;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.alert-button:hover {
+    background-color: #2980b9;
+    transform: translateY(-3px);
+}
